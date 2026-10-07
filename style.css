@@ -1,0 +1,564 @@
+:root {
+    --pri: #F4EEFF;
+    --sec: #DCD6F7;
+    --tri: #A6B1E1;
+    --tri2: #424874;
+    --comp: #76C457;
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 300;
+    src: url(./AeonikTRIAL-Light.otf);
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 350;
+    src: url(./AeonikTRIAL-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 500;
+    src: url(./AeonikTRIAL-RegularItalic.otf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aeonik;
+    font-weight: 300;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+    font-family: aeonik;
+    color: white;
+
+}
+
+
+
+section.allelem {
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+  background-image: url("https://www.incredibleindia.gov.in/content/dam/incredible-india/images/trips/uttarakhand/haridwar/picturesque-uttrakhand/sunset-kausani-uttarakhand-9-tri-iter-day9.jpg");
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    overflow: auto;
+    position: absolute; 
+
+}
+
+section.allelem .allfeatures
+{      
+       width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: space-evenly;
+    row-gap: 5px;
+
+} 
+
+section.allelem header {
+    height: 290px;
+    width: 100%;
+
+    background-image: url("https://www.incredibleindia.gov.in/content/dam/incredible-india/images/trips/uttarakhand/haridwar/picturesque-uttrakhand/sunset-kausani-uttarakhand-9-tri-iter-day9.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    align-items: center;
+}
+header .header1 h1,h2
+{
+  font-size: 35px;
+}
+header .header2
+{
+ display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+
+
+.elem {
+    background-color: var(--sec);
+    width: 322px;
+    font-size: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+    height: 350px;
+    position: relative;
+    transition: all ease 0.3s;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.elem h2 {
+    font-size: 30px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    color: var(--pri);
+}
+
+.elem:active {
+    scale: 0.97;
+}
+
+.fullelem {
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--tri2);
+    display: none;
+    position: absolute;
+}
+
+.back {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 20px;
+    padding: 1% 2%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 5px 10px var(--tri);
+    background-color: var(--pri);
+    font-family: aeonik;
+    font-weight: 200;
+    color: var(--tri2);
+    transition: all ease 0.3s;
+}
+
+.back:active {
+    scale: 0.90;
+}
+
+.todo.fullelem h1 {
+    font-size: 40px;
+    padding: 30px 75px;
+    font-family: aeonik;
+    font-weight: 200;
+
+}
+
+.todo.fullelem .todo-container {
+    height: 70%;
+    width: 90%;
+    border-radius: 20px;
+    margin: 2% auto;
+    /* background-color: var(--sec); */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo.fullelem .todo-container .addtask {
+
+    height: 100%;
+    width: 35%;
+    border-radius: 20px;
+    background-color: var(--tri);
+}
+
+.todo.fullelem .todo-container .alltask {
+
+    height: 100%;
+    width: 62%;
+    border-radius: 20px;
+    background-color: var(--tri);
+    overflow: auto;
+}
+
+.todo.fullelem .todo-container .addtask form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.todo-container .addtask form input#text-input {
+    font-size: 25px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+}
+
+.todo-container .addtask form textarea {
+    height: 200px;
+    font-size: 25px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+    resize: none;
+
+}
+
+.todo-container .addtask form button {
+    font-size: 25px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 15px;
+    transition: all ease 0.3s;
+    background-color: var(--sec);
+}
+
+.todo-container .addtask form button:active {
+    scale: 0.97;
+}
+
+.task {
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: var(--sec);
+    border-radius: 10px;
+    color: var(--tri2);
+    font-family: aeonik;
+    font-weight: 200;
+
+
+}
+
+.task button {
+    border-radius: 8px;
+    padding: 10px 5px;
+    border: none;
+    font-size: 20px;
+    font-family: aeonik;
+    font-weight: 500;
+
+    transition: all ease 0.3s;
+    background-color: #FFD758;
+}
+
+.task button:active {
+    scale: 0.95;
+}
+
+.mark {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+}
+
+.task h2 span {
+    background-color: red;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+}
+
+.task h2 span.true {
+    opacity: 1;
+}
+
+.task h2 span.false {
+    opacity: 0;
+}
+
+.goal.fullelem h1 {
+    font-size: 40px;
+    font-family: aeonik;
+    font-weight: 200;
+}
+
+
+
+
+.mark #checkbox {
+    scale: 1.5;
+}
+
+.mark label {
+    font-size: 20px;
+}
+
+.task-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: all ease 0.3s;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.task.show .task-details {
+    display: block;
+
+}
+
+.task button.green {
+    background-color: var(--comp);
+}
+
+.goal.fullelem {
+    padding: 30px 30px;
+}
+
+.day-planner {
+
+
+    background-color: var(--tri);
+    height: 85%;
+    width: 100%;
+    margin-top: 45px;
+    border-radius: 15px;
+    padding: 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: auto;
+
+
+}
+
+.day-planner .day-planner-time {
+
+    background-color: var(--tri);
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 49%;
+    margin-bottom: 10px;
+
+
+}
+
+.day-planner-time p {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    font-size: 20px;
+}
+
+
+.day-planner-time input {
+
+    width: 100%;
+    padding: 40px;
+    background-color: var(--sec);
+    font-size: 25px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+
+
+}
+
+.moti.fullelem h1 {
+    padding: 20px 20px;
+    font-family: aeonik;
+    font-weight: 300;
+
+}
+
+.moti.fullelem {
+
+   
+    position: relative;
+}
+
+.moti.fullelem .motivation {
+    height: 400px;
+    width: 850px;
+    background-color: var(--tri);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+}
+
+.moti.fullelem .motivation::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    border-radius: 40px;
+    scale: 1.05;
+    z-index: 8;
+    filter: blur(10px);
+}
+
+.moti.fullelem .motivation .motivation-wraper {
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--tri);
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.motivation-line {
+    background-color: var(--sec);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.motivation-line h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+     text-shadow: 2px 2px 5px white;
+}
+
+.moti-quote h2 {
+    font-size: 35px;
+     text-shadow: 2px 2px 5px black;
+    padding: 20px;
+  text-align: center;
+}
+.moti-auth h2
+{  position: absolute;
+    padding: 10px;
+    bottom: 5%;
+    right: 5%;
+    font-weight: 400;
+    background: #4274D9;
+    border-radius: 15px;
+}
+.time.fullelem 
+{  
+  position: relative;
+}
+.time.fullelem h1
+{  
+    padding: 20px;
+    font-size: 30px;
+    font-family: aeonik;
+    font-weight: 300;
+
+}
+.time.fullelem .pomodoro-timer
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.time.fullelem .pomodoro-timer h1
+{
+    font-size: 150px;
+    font-weight: 550;
+    font-family: aeonik;
+    font-weight: 300;
+    
+}
+.pomodoro-timer button
+
+{   
+     text-shadow: 2px 2px 5px black;
+    padding: 20px 40px;
+    border-radius: 15px;
+    margin-right: 10px;
+    box-shadow: 5px 5px 10px black;
+    font-size: 20px;
+    transition: all  0.8s ;
+    font-weight: 700;
+    font-family: aeonik;
+    font-weight: 300;
+    background-color: var(--tri);
+    border: none;
+    color: white;
+
+}
+.pomodoro-timer button:active
+{
+    scale: 0.90;
+     box-shadow: 0px 0px 0px black;
+}
+
+.time.fullelem .work
+{   position: absolute;
+    padding: 30px 50px;
+    top: 20%;
+    left: 50%;
+    font-size: 20px;
+    
+    transform: translate(-50%,0);
+     width: max-content;
+    background-color: #76C457;
+    border-radius: 20px;
+   
+}
+.time.fullelem .work h3
+{
+    text-align: center;
+    white-space: nowrap;
+    font-family: aeonik;
+    font-weight: 300; 
+}
+.header2 h3
+{
+    font-size: 27px;
+}
+.header2 h4
+{
+    font-size: 20px;
+}
+.header2 h1
+{
+    font-size: 20px;
+}
