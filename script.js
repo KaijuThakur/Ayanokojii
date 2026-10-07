@@ -223,7 +223,7 @@ async function weathercallapi()
 
 }
 
-let datess = new Date();
+
 let dh1 =document.querySelector("header .header1 h1");
 let temph2 = document.querySelector("header .header1 #temp");
 let ours = document.querySelector("header .header2 h3");
@@ -231,8 +231,7 @@ let humi = document.querySelector("header .header2 #humi");
 let wind= document.querySelector("header .header2 h1");
 let kk = document.querySelector("header .header1 h4");
 
-let hours = datess.getHours();
-let minutes = datess.getMinutes();
+
 let days = [
     
     "Sunday",
@@ -247,6 +246,9 @@ let days = [
 
 function timeday()
 {
+    let datess = new Date();
+    let hours = datess.getHours();
+let minutes = datess.getMinutes();
    let currentDay = days[datess.getDay()];
    dh1.innerHTML=currentDay;
    temph2.innerHTML=data.current.temp_c+"°C";
@@ -260,4 +262,6 @@ function timeday()
     wind.innerHTML= "Wind : " + data.current.wind_kph + " km/h";
     kk.innerHTML= data.current.condition.text;
 } 
+
 weathercallapi()
+setInterval(timeday, 1000);
