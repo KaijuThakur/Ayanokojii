@@ -261,6 +261,7 @@ let minutes = datess.getMinutes();
     humi.innerHTML= "Humidity : " + data.current.humidity + "%"
     wind.innerHTML= "Wind : " + data.current.wind_kph + " km/h";
     kk.innerHTML= data.current.condition.text;
+    console.log(data.current.condition.text);
 } 
 
 weathercallapi()
