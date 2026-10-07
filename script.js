@@ -135,12 +135,15 @@ dailygoals()
 function motivation() {
     let qoot = document.querySelector(".moti-quote h2");
     let auuth = document.querySelector(".moti-auth h2");
+
     async function fetchquote() {
-        let abc = await fetch("https://api.quotable.io/random");
+        let abc = await fetch("https://dummyjson.com/quotes/random");
         let de = await abc.json();
-        qoot.innerHTML = de.content;
+
+        qoot.innerHTML = de.quote;
         auuth.innerHTML = de.author;
     }
+
     fetchquote();
 }
 motivation()
