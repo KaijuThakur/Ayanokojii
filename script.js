@@ -216,7 +216,7 @@ let city = "Dehradun";
 let data = null;
 async function weathercallapi()
 {
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`)
+    let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`)
   data = await response.json();
  
   timeday()
